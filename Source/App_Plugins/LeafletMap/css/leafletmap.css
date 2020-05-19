@@ -1,0 +1,25 @@
+﻿.leaflet-map .map-container {
+    height: 300px;
+    width: 100%;
+    background-color: #ddd;
+    max-width: 800px;
+    position: relative;
+}
+
+.leaflet-map .map-container .leaflet-map-pane {
+    z-index: 1;
+}
+
+.leaflet-map .map-context-menu {
+    position: fixed;
+    display: none;
+    z-index: 9999;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.leaflet-map .map-context-menu > div {
+    padding: 10px 30px;
+    cursor: pointer;
+}

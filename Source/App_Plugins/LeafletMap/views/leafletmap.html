@@ -1,0 +1,48 @@
+﻿<div ng-controller="LeafletMap.Controller" class="leaflet-map">
+    <div class="control-group">
+        <div class="umb-el-wrap">
+            <div class="control-header">
+                <label class="control-label">
+                    Latitude
+                </label>
+            </div>
+            <div class="controls">
+                <div class="umb-property-editor">
+                    <input name="lat" type="number" class="umb-property-editor umb-number" ng-model="model.value.latLng[0]" fix-number="" min="-90" max="90" step="1e-16">
+                    <span style="display: none;"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="umb-el-wrap">
+            <div class="control-header">
+                <label class="control-label">
+                    Longitude
+                </label>
+            </div>
+            <div class="controls">
+                <div class="umb-property-editor">
+                    <input name="lon" type="number" class="umb-property-editor umb-number" ng-model="model.value.latLng[1]" fix-number="" min="-180" max="180" step="1e-16">
+                    <span style="display: none;"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="umb-el-wrap">
+            <div class="control-header"></div>
+            <div class="controls">
+                <div class="umb-property-editor">
+                    <div class="map-container">
+                        <div id="{{mapId}}" style="height: 300px; width: 100%;"></div>
+                        <div class="map-context-menu">
+                            <div ng-click="setContextMarker()">Set Location Here</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--ng-show="model.value && model.value[0] !== null && model.value[0] !== undefined && model.value[1] !== null && model.value[1] !== undefined"-->

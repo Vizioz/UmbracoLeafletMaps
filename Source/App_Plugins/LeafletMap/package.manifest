@@ -1,0 +1,48 @@
+﻿{
+    propertyEditors: [
+    {
+        alias: "Vizioz.LeafletMap",
+        name: "Leaflet Map",
+        editor: {
+            view: "~/App_Plugins/LeafletMap/views/leafletmap.html",
+			valueType: "JSON",
+			hideLabel: true,
+        },
+		prevalues: {
+			fields: [
+				{
+					label: "Leaflet Maps Access Token",
+					description: "The access token to use Leaflet Maps API",
+					key: "accessToken",
+					view: "textstring"
+				},
+				{
+					label: "Default Latitude",
+					description: "The default latitude to start the map visualization",
+					key: "defaultLat",
+					view: "decimal"
+				},
+				{
+					label: "Default Longitude",
+					description: "The default longitude to start the map visualization",
+					key: "defaultLng",
+					view: "decimal"
+				},
+				{
+					label: "Default Zoom",
+					description: "The default zoom to start the map visualization",
+					key: "defaultZoom",
+					view: "number"
+				}
+			]
+		},
+		icon: "icon-map-location"
+  	}],
+    javascript: [
+      "~/App_Plugins/LeafletMap/js/leafletmap.controller.js",
+      "~/App_Plugins/LeafletMap/js/leafletmap.factory.js"
+    ],
+    css: [
+		"~/App_Plugins/LeafletMap/css/leafletmap.css",
+    ]
+}
